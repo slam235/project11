@@ -1,0 +1,21 @@
+.button-edit {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 38px;
+    height: 18px;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .button-edit:focus {
+    outline-color: greenyellow;
+  }
+  .button-edit:hover {
+    background-color: white;
+    color: black;
+  }
+  .button-edit:active {
+    background-color: rgb(65, 65, 240);
+  }
