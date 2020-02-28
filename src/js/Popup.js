@@ -1,5 +1,5 @@
 //Класс для всплывающего окна
-class Popup {
+export default class Popup {
     constructor(popupWindow, popupOpen, popupClose, user, about, userInfoName, userInfoJob) {
       this.popupWindow = popupWindow;
       this.popupOpen = popupOpen;

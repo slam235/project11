@@ -1,5 +1,5 @@
 //Класс для хранения и отрисовки карточек
-class CardList {
+export default class CardList {
   constructor(container, card) {
     this.container = container;
     this.card = card; // передаю сюда объект класса с методами new Card();

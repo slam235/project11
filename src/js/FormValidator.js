@@ -1,5 +1,5 @@
 //Класс для валидации полей формы
-class FormValidator {
+export default class FormValidator {
     constructor(nameForm, saveButton, errorName, errorAbout, user, about) {
         this.nameForm = nameForm;
         this.saveButton = saveButton;
