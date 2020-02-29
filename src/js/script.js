@@ -7,6 +7,7 @@ import CardList from './CardList';
 import FormValidator from './FormValidator';
 import Popup from './Popup';
 import UserInfo from './UserInfo';
+import PopupNewPlace from './PopupNewPlace';
 
 (function () {/* Переменные */
   const placesList = document.querySelector('.places-list');
@@ -45,7 +46,7 @@ import UserInfo from './UserInfo';
   });
   api.getUserInfo()
     .then((data) => {
-      console.log(data);
+      //console.log(data);
       userinfo.setUserInfo(data.name, data.about);
       userinfo.updateUserInfo();
     })
@@ -55,7 +56,7 @@ import UserInfo from './UserInfo';
 
   api.getCards()
     .then((cards) => {
-      console.log(cards)
+      //console.log(cards)
       for (let i = 0; i < cards.length; i++) {
         placeslist.addCard(cards[i].name, cards[i].link, cards[i].likes.length, cards[i]._id)
       }
@@ -63,11 +64,6 @@ import UserInfo from './UserInfo';
     .catch((err) => {
       console.log(err);
     });
-  
-
-  
-
-
 
   const editFormValid = new FormValidator(formUser, saveButton, errorName, errorAbout, user, about);
   editFormValid.setEventListeners();
@@ -83,7 +79,7 @@ import UserInfo from './UserInfo';
       .catch((err) => {
         console.log(err);
       });
-    
+
 
     editFormValid.setSubmitButtonState();
 
@@ -94,8 +90,8 @@ import UserInfo from './UserInfo';
   card.setEventListeners();
 
 
-  
-  const places = new Popup(popup, userInfoButton, popupClose);
+
+  const places = new PopupNewPlace(popup, userInfoButton, popupClose);
   const edit = new Popup(popupEdit, editButton, editClose, user, about, userInfoName, userInfoJob);
   const picture = new Popup(popupPicture, Image, pictureClose);
 
@@ -139,7 +135,7 @@ import UserInfo from './UserInfo';
       errorLink.textContent = '';
     }
   }
-  
+
   /* Слушатели событий */
 
   form.addEventListener('submit', function (event) {
