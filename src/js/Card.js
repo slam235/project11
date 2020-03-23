@@ -1,5 +1,5 @@
 //Класс, создающий карточку
-class Card {
+export default class Card {
   constructor(container, popupPicture, Image) {
     this.container = container;
     this.popupPicture = popupPicture;
